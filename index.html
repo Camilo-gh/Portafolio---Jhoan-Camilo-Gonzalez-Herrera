@@ -1,111 +1,946 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
+
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portafolio | Jhoan Camilo González Herrera</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Portafolio de Jhoan</title>
+
+  <!--
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
+
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-  <header>
-    <h1>JHOAN CAMILO GONZÁLEZ HERRERA</h1>
-    <h2>Desarrollador de Software Junior</h2>
-    <p> 3236643023 |  camilogonzalezherrera661@gmail.com | Bogotá, Colombia</p>
-  </header>
+  <!--
+    - #MAIN
+  -->
 
   <main>
-    <!-- SOBRE MÍ -->
-    <section id="about">
-      <h3>Sobre mí</h3>
-      <p>
-        Soy un desarrollador de software junior con formación en el SENA y experiencia en el desarrollo
-        de aplicaciones web y sitios corporativos. Me apasiona la tecnología, la innovación y el diseño
-        de soluciones funcionales que aporten valor a las empresas. Tengo experiencia práctica en
-        <strong>Laravel, PHP, MySQL, React y JavaScript</strong>, así como conocimientos sólidos en
-        <strong>WordPress (WPBakery, Elementor y VentaFlow)</strong>. También he trabajado con
-        <strong>Odoo</strong> realizando ajustes en módulos empresariales.
-      </p>
-      <p>
-        Me considero una persona responsable, autodidacta y comprometida con el aprendizaje continuo.
-        Busco seguir creciendo como desarrollador, perfeccionando mis habilidades técnicas y contribuyendo
-        al éxito de los proyectos en los que participo.
-      </p>
-    </section>
 
-    <!-- PROYECTOS -->
-    <section id="projects">
-      <h3>Proyectos Destacados</h3>
+    <!--
+      - #SIDEBAR
+    -->
 
-      <!-- Proyecto 1 -->
-      <article class="project">
-        <img src="img/intranet.jpg" alt="Intranet MaxiAlimentos" class="project-img">
-        <div class="project-info">
-          <h4>Intranet Corporativa MaxiAlimentos</h4>
-          <p>
-            Desarrollo completo del sistema interno de la empresa con <strong>Laravel, React y MySQL</strong>.
-            Implementé autenticación con JWT, conexión API REST, gestión de usuarios y panel administrativo.
-            Este proyecto permitió digitalizar procesos internos y mejorar la comunicación entre áreas.
-          </p>
-          <p><strong>Tecnologías:</strong> Laravel, React, MySQL, JWT, PHP.</p>
+    <aside class="sidebar" data-sidebar>
+
+      <div class="sidebar-info">
+
+        <figure class="avatar-box">
+          <img src="./assets/images/my-avatar.png" alt="Richard hanrick" width="80">
+        </figure>
+
+        <div class="info-content">
+          <h1 class="name" title="Richard hanrick">Jhoan Gonzalez</h1>
+
+          <p class="title">Desarrollador Web</p>
         </div>
+
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Mostrar Contactos</span>
+
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+
+      </div>
+
+      <div class="sidebar-info_more">
+
+        <div class="separator"></div>
+
+        <ul class="contacts-list">
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Correo</p>
+
+              <a href="mailto:richard@example.com" class="contact-link">camilogonzalezherrera@gmail.com</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="phone-portrait-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Telefono</p>
+
+              <a href="tel:+12133522795" class="contact-link">+57 (323) 664-3023</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="calendar-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Cumpleaños</p>
+
+              <time datetime="1982-06-23">Agosto 01, 2006</time>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Ubicacion</p>
+
+              <address>Bogota D.C, Colombia</address>
+            </div>
+
+          </li>
+
+        </ul>
+
+        <div class="separator"></div>
+
+        <ul class="social-list">
+
+          <li class="social-item">
+            <a href="#" class="social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="#" class="social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="#" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </aside>
+
+
+
+
+
+    <!--
+      - #main-content
+    -->
+
+    <div class="main-content">
+
+      <!--
+        - #NAVBAR
+      -->
+
+      <nav class="navbar">
+
+        <ul class="navbar-list">
+
+          <button class="navbar-link active" data-nav-link data-page-target="about">
+            Acerca de mí
+          </button>
+
+          <button class="navbar-link" data-nav-link data-page-target="resume">
+            Resumen
+          </button>
+
+          <button class="navbar-link" data-nav-link data-page-target="portfolio">
+            Portafolio
+          </button>
+
+          <button class="navbar-link" data-nav-link data-page-target="contact">
+            Contacto
+          </button>
+
+        </ul>
+
+      </nav>
+      <!--
+        - #ABOUT
+      -->
+
+      <article class="about active" data-page="about">
+
+        <header>
+          <h2 class="h2 article-title">Acerca de mi</h2>
+        </header>
+
+        <!-- ABOUT TEXT -->
+        <section class="about-text">
+          <p>
+            Soy desarrollador de software junior con formación en Análisis y Desarrollo de Software en el SENA
+            y experiencia en proyectos empresariales reales.
+          </p>
+
+          <p>
+            He participado en el desarrollo de aplicaciones web, intranets corporativas y sitios web empresariales,
+            trabajando principalmente con <strong>Laravel, Angular y MySQL</strong>, aplicando autenticación
+            <strong>JWT</strong> y consumo de <strong>APIs REST</strong>.
+          </p>
+
+          <p>
+            También cuento con experiencia en el uso de <strong>WordPress</strong> (WPBakery, Elementor y VentaFlow)
+            y en ajustes básicos de módulos en <strong>Odoo</strong>, aportando soluciones funcionales,
+            seguras y bien estructuradas.
+          </p>
+        </section>
+
+        <!-- WHAT I'M DOING -->
+        <section class="service">
+
+          <h3 class="h3 service-title">A que me dedico</h3>
+
+          <ul class="service-list">
+
+            <!-- ITEM 1 -->
+            <li class="service-item">
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-dev.svg" alt="Web development icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Desarrollador Web</h4>
+                <p class="service-item-text">
+                  Desarrollo de aplicaciones web empresariales utilizando Laravel y Angular,
+                  enfocadas en rendimiento, seguridad y escalabilidad.
+                </p>
+              </div>
+            </li>
+
+            <!-- ITEM 2 -->
+            <li class="service-item">
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-dev.svg" alt="Backend development icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Desarrollador Backend</h4>
+                <p class="service-item-text">
+                  Implementación de lógica de negocio, autenticación JWT,
+                  APIs REST y conexión a bases de datos MySQL.
+                </p>
+              </div>
+            </li>
+
+            <!-- ITEM 3 -->
+            <li class="service-item">
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-design.svg" alt="CMS icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">CMS & Sitios Web Coorporativos</h4>
+                <p class="service-item-text">
+                  Desarrollo y mantenimiento de sitios web corporativos
+                  utilizando WordPress, WPBakery, Elementor y VentaFlow.
+                </p>
+              </div>
+            </li>
+
+            <!-- ITEM 4 -->
+            <li class="service-item">
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-app.svg" alt="Systems maintenance icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Mantenimiento de sistemas</h4>
+                <p class="service-item-text">
+                  Soporte técnico, mantenimiento y mejora continua
+                  de sistemas internos y plataformas empresariales.
+                </p>
+              </div>
+            </li>
+
+          </ul>
+
+        </section>
+
       </article>
 
-      <!-- Proyecto 2 -->
-      <article class="project">
-        <img src="img/pagina-maxialimentos.jpg" alt="Página web MaxiAlimentos" class="project-img">
-        <div class="project-info">
-          <h4>Página Principal de MaxiAlimentos S.A.S.</h4>
-          <p>
-            Desarrollo completo desde cero usando <strong>WordPress y WPBakery</strong>. Creé la estructura,
-            el diseño corporativo, las secciones informativas y los formularios de contacto. También integré
-            funcionalidades con Elementor y VentaFlow para mejorar la interacción con los usuarios.
-          </p>
-          <p><strong>Tecnologías:</strong> WordPress, WPBakery, HTML, CSS.</p>
-        </div>
+      <!--
+        - #RESUME
+      -->
+
+      <article class="resume" data-page="resume">
+
+        <header>
+          <h2 class="h2 article-title">Resumen</h2>
+        </header>
+
+        <!-- EDUCATION -->
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="school-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Education</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">
+                Tecnólogo en Análisis y Desarrollo de Software
+              </h4>
+
+              <span>SENA · 2023 — 2025</span>
+
+              <p class="timeline-text">
+                Formación en desarrollo de software con enfoque en aplicaciones web,
+                bases de datos, buenas prácticas de programación y desarrollo backend.
+                Actualmente en etapa final.
+              </p>
+            </li>
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">
+                Técnico en Contabilidad y Finanzas
+              </h4>
+
+              <span>SENA · 2020 — 2022</span>
+
+              <p class="timeline-text">
+                Formación técnica en procesos contables, financieros y administrativos,
+                fortaleciendo habilidades analíticas y organizativas.
+              </p>
+            </li>
+
+          </ol>
+
+        </section>
+
+        <!-- EXPERIENCE -->
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="briefcase-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Experience</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">
+                Desarrollador de Software Junior
+              </h4>
+
+              <span>MaxiAlimentos S.A.S · Julio 2025 — Actualidad</span>
+
+              <p class="timeline-text">
+                Desarrollo desde cero del sitio web corporativo de la empresa utilizando
+                WordPress y WPBakery. Participación activa en el desarrollo de la intranet
+                empresarial con Laravel, Angular y MySQL, aplicando autenticación JWT y
+                consumo de APIs REST.
+              </p>
+
+              <p class="timeline-text">
+                Soporte técnico, mantenimiento y mejoras en plataformas internas,
+                así como ajustes funcionales en módulos de Odoo para optimización
+                de procesos internos.
+              </p>
+            </li>
+
+          </ol>
+
+        </section>
+
+        <!-- SKILLS -->
+        <section class="skill">
+
+          <h3 class="h3 skills-title">Technical Skills</h3>
+
+          <ul class="skills-list content-card">
+
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">Laravel</h5>
+                <data value="75">75%</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 75%;"></div>
+              </div>
+            </li>
+
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">Angular</h5>
+                <data value="70">70%</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 70%;"></div>
+              </div>
+            </li>
+
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">MySQL</h5>
+                <data value="70">70%</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 70%;"></div>
+              </div>
+            </li>
+
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">WordPress</h5>
+                <data value="65">65%</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 65%;"></div>
+              </div>
+            </li>
+
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">Git & GitHub</h5>
+                <data value="70">70%</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 70%;"></div>
+              </div>
+            </li>
+
+          </ul>
+
+        </section>
+
       </article>
 
-      <!-- Proyecto 3 -->
-      <article class="project">
-        <img src="img/futcol.jpg" alt="Proyecto FUTCOL" class="project-img">
-        <div class="project-info">
-          <h4>FUTCOL</h4>
-          <p>
-            Sistema de gestión de torneos de microfútbol desarrollado como proyecto académico y personal.
-            Construido con <strong>Laravel y React</strong>, permite registrar equipos, administrar partidos,
-            resultados y tablas de posiciones. Diseñado para brindar una experiencia sencilla y eficiente.
-          </p>
-          <p><strong>Tecnologías:</strong> Laravel, React, PHP, MySQL.</p>
-        </div>
+      <!--
+        - #PORTFOLIO
+      -->
+
+      <article class="portfolio" data-page="portfolio">
+
+        <header>
+          <h2 class="h2 article-title">Portfolio</h2>
+        </header>
+
+        <section class="projects">
+
+          <ul class="filter-list">
+
+            <li class="filter-item">
+              <button class="active" data-filter-btn>All</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Web design</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Applications</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Web development</button>
+            </li>
+
+          </ul>
+
+          <div class="filter-select-box">
+
+            <button class="filter-select" data-select>
+
+              <div class="select-value" data-selecct-value>Select category</div>
+
+              <div class="select-icon">
+                <ion-icon name="chevron-down"></ion-icon>
+              </div>
+
+            </button>
+
+            <ul class="select-list">
+
+              <li class="select-item">
+                <button data-select-item>All</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Web design</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Applications</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Web development</button>
+              </li>
+
+            </ul>
+
+          </div>
+
+          <ul class="project-list">
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-1.jpg" alt="finance" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Finance</h3>
+
+                <p class="project-category">Web development</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-2.png" alt="orizon" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Orizon</h3>
+
+                <p class="project-category">Web development</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web design">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-3.jpg" alt="fundo" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Fundo</h3>
+
+                <p class="project-category">Web design</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="applications">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-4.png" alt="brawlhalla" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Brawlhalla</h3>
+
+                <p class="project-category">Applications</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web design">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-5.png" alt="dsm." loading="lazy">
+                </figure>
+
+                <h3 class="project-title">DSM.</h3>
+
+                <p class="project-category">Web design</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web design">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-6.png" alt="metaspark" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">MetaSpark</h3>
+
+                <p class="project-category">Web design</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-7.png" alt="summary" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Summary</h3>
+
+                <p class="project-category">Web development</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="applications">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-8.jpg" alt="task manager" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Task Manager</h3>
+
+                <p class="project-category">Applications</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-9.png" alt="arrival" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Arrival</h3>
+
+                <p class="project-category">Web development</p>
+
+              </a>
+            </li>
+
+          </ul>
+
+        </section>
+
       </article>
-    </section>
 
-    <!-- HABILIDADES -->
-    <section id="skills">
-      <h3>Habilidades Técnicas</h3>
-      <ul>
-        <li>Lenguajes: PHP, JavaScript, HTML, CSS</li>
-        <li>Frameworks: Laravel, React</li>
-        <li>Bases de Datos: MySQL, phpMyAdmin</li>
-        <li>CMS: WordPress (WPBakery, Elementor, VentaFlow)</li>
-        <li>ERP: Odoo (ajustes y desarrollo básico de módulos)</li>
-        <li>Herramientas: Git, GitHub, Composer, Node.js, XAMPP, VS Code</li>
-        <li>Metodologías: Buenas prácticas, MVC, API REST</li>
-      </ul>
-    </section>
 
-    <!-- CONTACTO -->
-    <section id="contact">
-      <h3>Contacto</h3>
-      <p> <a href="mailto:camilogonzalezherrera661@gmail.com">camilogonzalezherrera661@gmail.com</a></p>
-      <p> 323 664 3023</p>
-      <p> Bogotá, Colombia</p>
-    </section>
+
+
+
+      <!--
+        - #BLOG
+      -->
+
+      <article class="blog" data-page="blog">
+
+        <header>
+          <h2 class="h2 article-title">Blog</h2>
+        </header>
+
+        <section class="blog-posts">
+
+          <ul class="blog-posts-list">
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/blog-1.jpg" alt="Design conferences in 2022" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Design</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">Design conferences in 2022</h3>
+
+                  <p class="blog-text">
+                    Veritatis et quasi architecto beatae vitae dicta sunt, explicabo.
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/blog-2.jpg" alt="Best fonts every designer" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Design</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">Best fonts every designer</h3>
+
+                  <p class="blog-text">
+                    Sed ut perspiciatis, nam libero tempore, cum soluta nobis est eligendi.
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/blog-3.jpg" alt="Design digest #80" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Design</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">Design digest #80</h3>
+
+                  <p class="blog-text">
+                    Excepteur sint occaecat cupidatat no proident, quis nostrum exercitationem ullam corporis suscipit.
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/blog-4.jpg" alt="UI interactions of the week" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Design</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">UI interactions of the week</h3>
+
+                  <p class="blog-text">
+                    Enim ad minim veniam, consectetur adipiscing elit, quis nostrud exercitation ullamco laboris nisi.
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/blog-5.jpg" alt="The forgotten art of spacing" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Design</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">The forgotten art of spacing</h3>
+
+                  <p class="blog-text">
+                    Maxime placeat, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/blog-6.jpg" alt="Design digest #79" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Design</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">Design digest #79</h3>
+
+                  <p class="blog-text">
+                    Optio cumque nihil impedit uo minus quod maxime placeat, velit esse cillum.
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #CONTACT
+      -->
+
+      <article class="contact" data-page="contact">
+
+        <header>
+          <h2 class="h2 article-title">Contact</h2>
+        </header>
+
+        <section class="mapbox" data-mapbox>
+          <figure>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d199666.5651251294!2d-121.58334177520186!3d38.56165006739519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x809ac672b28397f9%3A0x921f6aaa74197fdb!2sSacramento%2C%20CA%2C%20USA!5e0!3m2!1sen!2sbd!4v1647608789441!5m2!1sen!2sbd"
+              width="400" height="300" loading="lazy"></iframe>
+          </figure>
+        </section>
+
+        <section class="contact-form">
+
+          <h3 class="h3 form-title">Contact Form</h3>
+
+          <form action="#" class="form" data-form>
+
+            <div class="input-wrapper">
+              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
+
+              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
+            </div>
+
+            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
+
+            <button class="form-btn" type="submit" disabled data-form-btn>
+              <ion-icon name="paper-plane"></ion-icon>
+              <span>Send Message</span>
+            </button>
+
+          </form>
+
+        </section>
+
+      </article>
+
+    </div>
+
   </main>
 
-  <footer>
-    <p>© 2025 Jhoan Camilo González Herrera.</p>
-  </footer>
+
+
+
+
+
+  <!--
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
 </body>
+
 </html>
