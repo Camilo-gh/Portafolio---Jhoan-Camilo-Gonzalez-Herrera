@@ -1,0 +1,131 @@
+<article class="portfolio" data-page="portfolio">
+
+  <header>
+    <h2 class="h2 article-title">Portafolio</h2>
+  </header>
+
+  <section class="projects">
+
+    <!-- Filtros -->
+    <ul class="filter-list">
+
+      <li class="filter-item">
+        <button class="active" data-filter-btn data-filter="all">Todo</button>
+      </li>
+
+      <li class="filter-item">
+        <button data-filter-btn data-filter="web-design">Diseño web</button>
+      </li>
+
+      <li class="filter-item">
+        <button data-filter-btn data-filter="web-development">Desarrollo web</button>
+      </li>
+
+    </ul>
+
+    <!-- Select (móvil) -->
+    <div class="filter-select-box">
+
+      <button class="filter-select" data-select>
+        <div class="select-value" data-select-value>Seleccionar Categoría</div>
+
+        <div class="select-icon">
+          <ion-icon name="chevron-down"></ion-icon>
+        </div>
+      </button>
+
+      <ul class="select-list">
+
+        <li class="select-item">
+          <button data-select-item data-filter="all">Todo</button>
+        </li>
+
+        <li class="select-item">
+          <button data-select-item data-filter="web-design">Diseño web</button>
+        </li>
+
+        <li class="select-item">
+          <button data-select-item data-filter="web-development">Desarrollo web</button>
+        </li>
+
+      </ul>
+
+    </div>
+
+    <!-- Proyectos -->
+    <ul class="project-list">
+
+      <!-- 1) MaxiAlimentos (WordPress) - DISEÑO WEB -->
+      <li class="project-item active" data-filter-item data-category="web-design">
+
+        <figure class="project-img">
+          <div class="project-item-icon-box">
+            <a href="https://www.maxialimentos.com/" target="_blank" rel="noopener" title="Ver sitio">
+              <ion-icon name="eye-outline"></ion-icon>
+            </a>
+          </div>
+
+          <img src="./assets/imagenes/maxialimentos.png" alt="MaxiAlimentos - WordPress" loading="lazy">
+        </figure>
+
+        <h3 class="project-title">
+          <a href="https://www.maxialimentos.com/" target="_blank" rel="noopener">
+            MaxiAlimentos (WordPress)
+          </a>
+        </h3>
+
+        <p class="project-category">Diseño web · WordPress</p>
+
+      </li>
+
+      <!-- 2) FutCol (Laravel + React) - DESARROLLO WEB -->
+      <li class="project-item active" data-filter-item data-category="web-development">
+
+        <figure class="project-img">
+          <div class="project-item-icon-box">
+            <a href="https://github.com/Kevin-1946/FUTCOL_V2.git" target="_blank" rel="noopener" title="Ver repositorio">
+              <ion-icon name="logo-github"></ion-icon>
+            </a>
+          </div>
+
+          <img src="./assets/imagenes/futcol.png" alt="FutCol - Laravel + React" loading="lazy">
+        </figure>
+
+        <h3 class="project-title">
+          <a href="https://github.com/Kevin-1946/FUTCOL_V2.git" target="_blank" rel="noopener">
+            FutCol (Laravel + React)
+          </a>
+        </h3>
+
+        <p class="project-category">Desarrollo web · Laravel + React</p>
+
+      </li>
+
+      <!-- 3) Intranet Corporativa (Laravel + React) - DESARROLLO WEB -->
+      <li class="project-item active" data-filter-item data-category="web-development">
+
+        <figure class="project-img">
+          <div class="project-item-icon-box">
+            <a href="https://github.com/aprendizdesarrollo-dev/MaxiAlimentos.git" target="_blank" rel="noopener" title="Ver repositorio">
+              <ion-icon name="logo-github"></ion-icon>
+            </a>
+          </div>
+
+          <img src="./assets/imagenes/Intranet.png" alt="Intranet Corporativa - Laravel + React" loading="lazy">
+        </figure>
+
+        <h3 class="project-title">
+          <a href="https://github.com/aprendizdesarrollo-dev/MaxiAlimentos.git" target="_blank" rel="noopener">
+            Intranet Corporativa (Laravel + React)
+          </a>
+        </h3>
+
+        <p class="project-category">Desarrollo web · Laravel + React</p>
+
+      </li>
+
+    </ul>
+
+  </section>
+
+</article>
