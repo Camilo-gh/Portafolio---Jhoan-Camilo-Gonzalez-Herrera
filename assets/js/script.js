@@ -167,22 +167,55 @@ function initUI() {
   // ===============================
   // CONTACT FORM
   // ===============================
-  const form = document.querySelector("[data-form]");
-  const formInputs = document.querySelectorAll("[data-form-input]");
-  const formBtn = document.querySelector("[data-form-btn]");
 
-  if (form && formInputs.length && formBtn) {
-    const check = () => {
-      if (form.checkValidity()) {
-        formBtn.removeAttribute("disabled");
-      } else {
-        formBtn.setAttribute("disabled", "");
-      }
-    };
+const form = document.querySelector("[data-form]");
+const formInputs = document.querySelectorAll("[data-form-input]");
+const formBtn = document.querySelector("[data-form-btn]");
 
-    formInputs.forEach(input => input.addEventListener("input", check));
-    check();
-  }
+if (form && formInputs.length && formBtn) {
+  const check = () => {
+    if (form.checkValidity()) formBtn.removeAttribute("disabled");
+    else formBtn.setAttribute("disabled", "");
+  };
+
+  formInputs.forEach((input) => input.addEventListener("input", check));
+  check();
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    formBtn.setAttribute("disabled", "");
+    const span = formBtn.querySelector("span");
+    const originalText = span ? span.textContent : "Enviar";
+    if (span) span.textContent = "Enviando...";
+
+    try {
+      const res = await fetch(form.action, {
+        method: "POST",
+        body: new FormData(form),
+        headers: { "Accept": "application/json" },
+      });
+
+      if (!res.ok) throw new Error("Error al enviar");
+
+      form.reset();
+      if (span) span.textContent = "Mensaje enviado ✓";
+
+      setTimeout(() => {
+        if (span) span.textContent = originalText;
+        check();
+      }, 2500);
+
+    } catch (err) {
+      console.error(err);
+      if (span) span.textContent = "Error, intenta de nuevo";
+      setTimeout(() => {
+        if (span) span.textContent = originalText;
+        check();
+      }, 2500);
+    }
+  });
+}
 
   // ===============================
   // PAGE NAVIGATION
