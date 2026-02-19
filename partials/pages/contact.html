@@ -32,28 +32,22 @@
     <h3 class="h3 form-title">Formulario de contacto</h3>
 
     <form action="https://formspree.io/f/xzdapbny" method="POST" class="form" data-form>
-
-      <input type="hidden" name="_next"
-        value="https://camilo-gh.github.io/Portafolio---Jhoan-Camilo-Gonzalez-Herrera/#contact">
-      <!-- Asunto del correo que te llegará -->
-      <input type="hidden" name="_subject" value="Nuevo mensaje desde tu portafolio">
-
-      <!-- Anti-spam (honeypot). No lo ve el usuario -->
-      <input type="text" name="_gotcha" style="display:none">
+      <input type="hidden" name="_subject" value=" Nuevo mensaje desde tu portafolio">
+      <input type="hidden" name="_template" value="table">
 
       <div class="input-wrapper">
-        <input type="text" name="nombre_completo" class="form-input" placeholder="Nombre completo" required
-          data-form-input>
+        <input type="text" name="Nombre" class="form-input" placeholder="Nombre completo" required data-form-input>
 
-        <input type="email" name="correo" class="form-input" placeholder="Correo" required data-form-input>
+        <input type="email" name="_replyto" class="form-input" placeholder="Correo" required data-form-input>
       </div>
 
-      <textarea name="mensaje" class="form-input" placeholder="Escribe tu mensaje" required data-form-input></textarea>
+      <textarea name="Mensaje" class="form-input" placeholder="Escribe tu mensaje" required data-form-input></textarea>
 
-      <button class="form-btn" type="submit">
+      <button class="form-btn" type="submit" disabled data-form-btn>
         <ion-icon name="paper-plane"></ion-icon>
         <span>Enviar</span>
       </button>
     </form>
+
   </section>
 </article>
