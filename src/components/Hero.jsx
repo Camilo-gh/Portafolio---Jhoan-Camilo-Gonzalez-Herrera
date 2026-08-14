@@ -18,6 +18,7 @@ const stackIcons = [
 
 export default function Hero() {
   const skills = ['ITIL', 'Active Directory', 'ServiceNow', 'React', 'Laravel', 'Spring Boot', 'MySQL', 'MongoDB'];
+  const cvUrl = `${import.meta.env.BASE_URL}cv.pdf`;
 
   const socialLinks = [
     { name: 'GitHub', Icon: SiGithub, href: 'https://github.com/Camilo-gh', color: 'hover:text-gray-300' },
@@ -128,7 +129,7 @@ export default function Hero() {
           </Link>
 
           <a
-            href="/cv.pdf"
+            href={cvUrl}
             download="Jhoan_Camilo_Gonzalez_CV.pdf"
             className="group px-8 py-4 rounded-full border-2 border-slate-600 hover:border-cyan-400 font-semibold flex items-center gap-2 hover:bg-slate-800/50 transition-all duration-300"
           >
