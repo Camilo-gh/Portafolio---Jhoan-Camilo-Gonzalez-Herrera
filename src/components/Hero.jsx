@@ -1,8 +1,8 @@
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { SiReact, SiSpringboot, SiLaravel, SiMysql, SiMongodb, SiGithub, SiGit, SiDocker, SiPython, SiLinux } from 'react-icons/si';
+import { SiReact, SiSpringboot, SiLaravel, SiMysql, SiMongodb, SiGithub, SiGit, SiDocker, SiPython } from 'react-icons/si';
 import { FiArrowRight, FiDownload, FiChevronDown, FiCode } from 'react-icons/fi';
 import { FaLinkedin } from 'react-icons/fa';
+import { useLanguage } from '../context/LanguageContext';
 
 // Grid estable (no posiciones sueltas) de íconos del stack
 const stackIcons = [
@@ -16,9 +16,9 @@ const stackIcons = [
   { Icon: SiPython, color: '#3776AB', label: 'Python' },
 ];
 
-export default function Hero() {
+export default function Hero({ onOpenProjects }) {
+  const { t } = useLanguage();
   const skills = ['ITIL', 'Active Directory', 'ServiceNow', 'React', 'Laravel', 'Spring Boot', 'MySQL', 'MongoDB'];
-  const cvUrl = `${import.meta.env.BASE_URL}cv.pdf`;
 
   const socialLinks = [
     { name: 'GitHub', Icon: SiGithub, href: 'https://github.com/Camilo-gh', color: 'hover:text-gray-300' },
@@ -39,7 +39,7 @@ export default function Hero() {
   };
 
   return (
-    <section className="min-h-screen grid md:grid-cols-[1fr_auto] gap-x-10 lg:gap-x-16 items-center px-6 md:px-12 lg:px-24 text-white relative overflow-hidden max-w-7xl mx-auto">
+    <section id="home" className="min-h-screen grid md:grid-cols-[1.1fr_0.9fr] gap-x-6 lg:gap-x-10 items-center px-6 md:px-12 lg:px-20 text-white relative overflow-hidden">
 
       {/* Blobs decorativos */}
       <div className="absolute top-20 -left-20 w-96 h-96 bg-purple-600/20 rounded-full blur-3xl" />
@@ -58,7 +58,7 @@ export default function Hero() {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.2, duration: 0.5 }}
         >
-          Hola, soy Jhoan Camilo González Herrera
+          {t('hero.greeting')}
         </motion.p>
 
         {/* Título forzado a 2 líneas estables, tamaño responsivo para que no rompa el layout */}
@@ -68,8 +68,8 @@ export default function Hero() {
           initial="hidden"
           animate="visible"
         >
-          <span className="block whitespace-nowrap">De resolver tickets a</span>
-          <span className="block whitespace-nowrap">construir soluciones.</span>
+          <span className="block whitespace-nowrap">{t('hero.title1')}</span>
+          <span className="block whitespace-nowrap">{t('hero.title2')}</span>
         </motion.h1>
 
         <motion.p
@@ -79,8 +79,7 @@ export default function Hero() {
           animate="visible"
           transition={{ delay: 0.2 }}
         >
-          Desarrollador Backend y Analista de Soporte TI en <span className="text-cyan-400 font-semibold">FRACTALIA</span>,
-          construyendo mi camino hacia el desarrollo full stack.
+          {t('hero.subtitle')}
         </motion.p>
 
         <motion.p
@@ -90,9 +89,7 @@ export default function Hero() {
           animate="visible"
           transition={{ delay: 0.3 }}
         >
-          Experiencia en Spring Boot, Laravel y React, bases de datos MySQL y MongoDB, integración
-          de sistemas vía API REST y SOAP — complementado con soporte técnico, gestión de incidentes
-          y buenas prácticas ITIL.
+          {t('hero.description')}
         </motion.p>
 
         {/* Skills Tags */}
@@ -120,20 +117,20 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 0.5 }}
         >
-          <Link
-            to="/proyectos"
+          <button
+            onClick={onOpenProjects}
             className="group px-8 py-4 rounded-full bg-gradient-to-r from-purple-500 to-cyan-500 font-semibold flex items-center gap-2 hover:shadow-lg hover:shadow-purple-500/50 transition-all duration-300 transform hover:scale-105"
           >
-            Ver proyectos
+            {t('hero.viewProjects')}
             <FiArrowRight className="group-hover:translate-x-1 transition-transform" />
-          </Link>
+          </button>
 
           <a
-            href={cvUrl}
+            href="/cv.pdf"
             download="Jhoan_Camilo_Gonzalez_CV.pdf"
             className="group px-8 py-4 rounded-full border-2 border-slate-600 hover:border-cyan-400 font-semibold flex items-center gap-2 hover:bg-slate-800/50 transition-all duration-300"
           >
-            Descargar CV
+            {t('hero.downloadCV')}
             <FiDownload className="group-hover:scale-110 transition-transform" />
           </a>
         </motion.div>
@@ -167,7 +164,7 @@ export default function Hero() {
         transition={{ duration: 0.8, delay: 0.2 }}
         className="hidden md:flex relative items-center justify-center"
       >
-        <div className="relative w-[320px] rounded-3xl bg-slate-900/40 backdrop-blur-md border border-slate-700/60 p-8 shadow-2xl shadow-purple-500/10">
+        <div className="relative w-full max-w-sm rounded-3xl bg-slate-900/40 backdrop-blur-md border border-slate-700/60 p-8 shadow-2xl shadow-purple-500/10">
 
           {/* Símbolo de código central, como acento */}
           <div className="flex items-center justify-center mb-6">
@@ -177,7 +174,7 @@ export default function Hero() {
           </div>
 
           <p className="text-center text-slate-400 text-xs font-mono mb-6 tracking-widest">
-            &lt;/&gt; MI STACK
+            &lt;/&gt; {t('hero.stackTitle')}
           </p>
 
           {/* Grid fijo, sin posiciones absolutas sueltas */}
@@ -205,7 +202,7 @@ export default function Hero() {
         animate={{ y: [0, 8, 0] }}
         transition={{ duration: 2, repeat: Infinity }}
       >
-        <span className="text-sm text-slate-400">Scroll</span>
+        <span className="text-sm text-slate-400">{t('hero.scroll')}</span>
         <FiChevronDown className="text-cyan-400" size={24} />
       </motion.div>
     </section>

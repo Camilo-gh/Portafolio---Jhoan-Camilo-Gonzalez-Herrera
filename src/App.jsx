@@ -1,19 +1,20 @@
 import { HashRouter, Routes, Route } from 'react-router-dom';
 import CodeBackground from './components/CodeBackground';
+import { LanguageProvider } from './context/LanguageContext';
 import Home from './pages/Home';
-import Projects from './pages/Projects';
 
 function App() {
   return (
-    <HashRouter>
-      <CodeBackground />
-      <div className="relative z-10">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/proyectos" element={<Projects />} />
-        </Routes>
-      </div>
-    </HashRouter>
+    <LanguageProvider>
+      <HashRouter>
+        <CodeBackground />
+        <div className="relative z-10">
+          <Routes>
+            <Route path="/" element={<Home />} />
+          </Routes>
+        </div>
+      </HashRouter>
+    </LanguageProvider>
   );
 }
 
